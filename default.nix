@@ -65,6 +65,15 @@ staples.pkgs.mkShell {
       ];
     })
     (staples.script {
+      name = "pass-phonetic-development-environment";
+      src = ./scripts/pass-phonetic-development-environment;
+      dependencies = [
+        staples.scripts.development-environment
+	staples.pkgs.which
+	system-secrets-read-only-pass
+      ];
+    })
+    (staples.script {
       name = "staples-development-environment";
       src = ./scripts/staples-development-environment;
       dependencies = [
