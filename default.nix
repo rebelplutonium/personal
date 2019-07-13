@@ -12,6 +12,7 @@ let
 in
 staples.pkgs.mkShell {
   buildInputs = [
+    staples.scripts.homer
     (staples.script {
       name = "browser-secrets-read-only-pass";
       src = ./scripts/browser-secrets-read-only-pass;
